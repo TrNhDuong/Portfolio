@@ -15,27 +15,27 @@ const Contact = () => {
                 transition={{ duration: 0.5 }}
                 viewport={{ once: true }}
             >
-                <p className="text-green font-mono mb-4">04. What's Next?</p>
-                <h2 className="text-4xl md:text-5xl font-bold text-slate-100 mb-6">Get In Touch</h2>
-                <p className="text-slate text-lg mb-10">
+                <p className="text-primary font-medium mb-4 tracking-wide">04. What's Next?</p>
+                <h2 className="section-title mb-8">Get In Touch</h2>
+                <p className="text-slate-600 text-lg mb-12 leading-relaxed">
                     I'm currently looking for new opportunities as a Data Engineer or Full Stack Developer.
                     Whether you have a question or just want to say hi, my inbox is always open!
                 </p>
-                <a href="mailto:nhatduong01012005@gmail.com" className="inline-block border border-green text-green px-8 py-4 rounded hover:bg-green/10 transition-colors font-mono">
+                <a href="mailto:nhatduong01012005@gmail.com" className="btn-primary inline-flex items-center justify-center">
                     Say Hello
                 </a>
 
-                <div className="flex justify-center space-x-8 mt-12">
-                    <a href="mailto:nhatduong01012005@gmail.com" className="text-slate hover:text-green transition-colors duration-300">
+                <div className="flex justify-center space-x-8 mt-16">
+                    <a href="mailto:nhatduong01012005@gmail.com" className="text-slate-400 hover:text-primary transition-colors duration-300 transform hover:scale-110">
                         <Mail size={24} />
                     </a>
-                    <a href={linkedin} target="_blank" rel="noopener noreferrer" className="text-slate hover:text-green transition-colors duration-300">
+                    <a href={linkedin} target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-primary transition-colors duration-300 transform hover:scale-110">
                         <Linkedin size={24} />
                     </a>
-                    <a href={github} target="_blank" rel="noopener noreferrer" className="text-slate hover:text-green transition-colors duration-300">
+                    <a href={github} target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-primary transition-colors duration-300 transform hover:scale-110">
                         <Github size={24} />
                     </a>
-                    <a href={facebook} target="_blank" rel="noopener noreferrer" className="text-slate hover:text-green transition-colors duration-300">
+                    <a href={facebook} target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-primary transition-colors duration-300 transform hover:scale-110">
                         <Facebook size={24} />
                     </a>
                 </div>

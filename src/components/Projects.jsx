@@ -32,27 +32,26 @@ const Projects = () => {
                 transition={{ duration: 0.5 }}
                 viewport={{ once: true }}
             >
-                <div className="flex items-center mb-10">
-                    <h2 className="text-2xl md:text-3xl font-bold text-slate-100 mr-4"><span className="text-green font-mono">03.</span> Key Projects</h2>
-                    <div className="h-px bg-lightest-navy flex-grow max-w-xs"></div>
+                <div className="flex items-center mb-16 justify-center">
+                    <h2 className="section-title mb-0">Key Projects</h2>
                 </div>
 
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {projects.map((project, index) => (
-                        <div key={index} className="bg-light-navy/80 p-8 rounded shadow-lg hover:-translate-y-2 transition-transform duration-300 group">
+                        <div key={index} className="glass-card p-8 flex flex-col group h-full">
                             <div className="flex justify-between items-center mb-6">
-                                <Folder className="text-green" size={40} />
-                                <div className="flex space-x-4 text-slate">
-                                    <a href={project.links.github} className="hover:text-green transition-colors"><Github size={20} /></a>
-                                    <a href={project.links.external} className="hover:text-green transition-colors"><ExternalLink size={20} /></a>
+                                <Folder className="text-primary group-hover:text-secondary transition-colors" size={40} />
+                                <div className="flex space-x-4 text-slate-500">
+                                    <a href={project.links.github} target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors"><Github size={22} /></a>
+                                    <a href={project.links.external} target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors"><ExternalLink size={22} /></a>
                                 </div>
                             </div>
-                            <h3 className="text-xl font-bold text-slate-100 mb-2 group-hover:text-green transition-colors">{project.title}</h3>
-                            <p className="text-slate mb-6 text-sm leading-relaxed">{project.description}</p>
+                            <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-primary transition-colors">{project.title}</h3>
+                            <p className="text-slate-600 mb-6 text-base leading-relaxed flex-grow">{project.description}</p>
                             <div className="mt-auto">
                                 <ul className="flex flex-wrap gap-2">
                                     {project.tech.map((t, i) => (
-                                        <li key={i} className="text-xs font-mono text-slate-100 opacity-60">{t}</li>
+                                        <li key={i} className="text-xs font-medium text-primary bg-primary/10 px-3 py-1 rounded-full">{t}</li>
                                     ))}
                                 </ul>
                             </div>

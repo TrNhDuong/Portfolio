@@ -28,10 +28,10 @@ const Navbar = () => {
     ];
 
     return (
-        <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-navy/90 backdrop-blur-md shadow-lg py-4' : 'bg-transparent py-6'}`}>
+        <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'glass py-3' : 'bg-transparent py-5'}`}>
             <div className="container mx-auto px-6 flex justify-between items-center">
-                <Link to="hero" smooth={true} duration={500} className="text-green font-mono text-xl font-bold cursor-pointer">
-                    ND.
+                <Link to="hero" smooth={true} duration={500} className="text-2xl font-display font-bold text-gray-900 cursor-pointer tracking-tighter hover:text-primary transition-colors">
+                    ND<span className="text-primary">.</span>
                 </Link>
 
                 {/* Desktop Menu */}
@@ -42,19 +42,19 @@ const Navbar = () => {
                             to={link.to}
                             smooth={true}
                             duration={500}
-                            className="text-light-slate hover:text-green transition-colors cursor-pointer font-mono text-sm"
+                            className="text-slate-600 hover:text-primary font-medium transition-colors cursor-pointer text-sm tracking-wide"
                         >
-                            <span className="text-green mr-1">0{index + 1}.</span> {link.name}
+                            {link.name}
                         </Link>
                     ))}
-                    <a href={resume} target="_blank" rel="noopener noreferrer" className="border border-green text-green px-4 py-2 rounded hover:bg-green/10 transition-colors font-mono text-sm">
+                    <a href={resume} target="_blank" rel="noopener noreferrer" className="btn-outline px-5 py-2 text-sm">
                         Resume
                     </a>
                 </div>
 
                 {/* Mobile Menu Button */}
                 <div className="md:hidden">
-                    <button onClick={() => setIsOpen(!isOpen)} className="text-green">
+                    <button onClick={() => setIsOpen(!isOpen)} className="text-slate-800 hover:text-primary transition-colors">
                         {isOpen ? <X size={24} /> : <Menu size={24} />}
                     </button>
                 </div>
@@ -62,8 +62,8 @@ const Navbar = () => {
 
             {/* Mobile Menu */}
             {isOpen && (
-                <div className="md:hidden absolute top-full left-0 w-full bg-light-navy/95 backdrop-blur-md shadow-lg py-4">
-                    <div className="flex flex-col items-center space-y-4">
+                <div className="md:hidden absolute top-full left-0 w-full bg-white/95 backdrop-blur-md border-b border-gray-100 py-4 shadow-lg">
+                    <div className="flex flex-col items-center space-y-6">
                         {navLinks.map((link, index) => (
                             <Link
                                 key={index}
@@ -71,12 +71,12 @@ const Navbar = () => {
                                 smooth={true}
                                 duration={500}
                                 onClick={() => setIsOpen(false)}
-                                className="text-light-slate hover:text-green transition-colors cursor-pointer font-mono"
+                                className="text-slate-600 hover:text-primary font-medium transition-colors cursor-pointer text-lg"
                             >
-                                0{index + 1}. {link.name}
+                                {link.name}
                             </Link>
                         ))}
-                        <a href={resume} target="_blank" rel="noopener noreferrer" className="border border-green text-green px-4 py-2 rounded hover:bg-green/10 transition-colors font-mono text-sm">
+                        <a href={resume} target="_blank" rel="noopener noreferrer" className="btn-outline px-6 py-2">
                             Resume
                         </a>
                     </div>
