@@ -7,7 +7,7 @@ const Projects = () => {
         {
             title: "VietnamWorks Data Pipeline",
             description: "End-to-end ETL pipeline automating recruitment data collection and processing. Built with Python, Airflow, and dbt.",
-            tech: ["Python", "Airflow", "Docker", "dbt", "PostgreSQL"],
+            tech: ["Python", "Airflow", "Docker", "dbt", "PostgreSQL", "ADLS Gen2"],
             links: { github: "https://github.com/TrNhDuong/VietnamWorks_DE_Pipeline", external: "#" } // Placeholder links
         },
         {
@@ -21,6 +21,12 @@ const Projects = () => {
             description: "Full-stack web application for job matching and recruitment management.",
             tech: ["MongoDB", "Express", "Node.js", "React"],
             links: { github: "https://github.com/TrNhDuong/Job_Portal", external: "#" }
+        },
+        {
+            title: "Finetune NLLB-200 Distilled 1.3B for Vietnamese-Chinese Translation",
+            description: "Fine-tuned NLLB-200 Distilled 1.3B (LoRA), boosting BLEU 22.64→31.96 (+41%), ChrF 40.52→48.09 (+19%), and reducing TER 76.17→62.97 (−17%).",
+            tech: ["PyTorch", "Hugging Face", "NLLB-200 Distilled 1.3B", "Vietnamese-Chinese Translation"],
+            links: { github: "https://huggingface.co/duongbambo/Finetune-NLLB-200-Distilled-1.3B", external: "#" }
         }
     ];
 

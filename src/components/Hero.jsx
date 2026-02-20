@@ -46,7 +46,7 @@ const Hero = () => {
                     className="max-w-2xl"
                 >
                     <p className="text-slate-600 text-lg md:text-xl mb-12 leading-relaxed">
-                        I'm a Data Engineer and Full Stack Developer based in Ho Chi Minh City.
+                        I'm a Data Engineer based in Ho Chi Minh City.
                         Currently a student at <span className="text-primary font-semibold">HCMUS</span>, I specialize in building
                         robust data pipelines and scalable web applications that turn complex data into actionable insights.
                     </p>
