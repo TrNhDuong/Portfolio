@@ -15,7 +15,6 @@ const Contact = () => {
                 transition={{ duration: 0.5 }}
                 viewport={{ once: true }}
             >
-                <p className="text-primary font-medium mb-4 tracking-wide">04. What's Next?</p>
                 <h2 className="section-title mb-8">Get In Touch</h2>
                 <p className="text-slate-600 text-lg mb-12 leading-relaxed">
                     I'm currently looking for new opportunities as a Data Engineer or Full Stack Developer.

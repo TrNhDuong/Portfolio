@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Folder, ExternalLink, Github } from 'lucide-react';
+import { Folder, Github } from 'lucide-react';
 
 const Projects = () => {
     const projects = [
@@ -27,6 +27,16 @@ const Projects = () => {
             description: "Fine-tuned NLLB-200 Distilled 1.3B (LoRA), boosting BLEU 22.64→31.96 (+41%), ChrF 40.52→48.09 (+19%), and reducing TER 76.17→62.97 (−17%).",
             tech: ["PyTorch", "Hugging Face", "NLLB-200 Distilled 1.3B", "Vietnamese-Chinese Translation"],
             links: { github: "https://huggingface.co/duongbambo/Finetune-NLLB-200-Distilled-1.3B", external: "#" }
+        },
+        {
+            title: "BamboChat",
+            description: "A real-time chat application featuring private and group messaging, powered by Socket.io and Redis.",
+            tech: ["MongoDB", "Express", "Node.js", "React", "Socket.io", "Redis"],
+            links: {
+                github: "https://github.com/TrNhDuong/BamboChat_Frontend",
+                github_backend: "https://github.com/TrNhDuong/BamboChat_Backend",
+                external: "#"
+            }
         }
     ];
 
@@ -48,8 +58,20 @@ const Projects = () => {
                             <div className="flex justify-between items-center mb-6">
                                 <Folder className="text-primary group-hover:text-secondary transition-colors" size={40} />
                                 <div className="flex space-x-4 text-slate-500">
-                                    <a href={project.links.github} target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors"><Github size={22} /></a>
-                                    <a href={project.links.external} target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors"><ExternalLink size={22} /></a>
+                                    <div className="flex flex-col items-center">
+                                        <a href={project.links.github} target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors flex items-center gap-1">
+                                            <Github size={22} />
+                                            {project.links.github_backend && <span className="text-[10px] uppercase font-bold">FE</span>}
+                                        </a>
+                                    </div>
+                                    {project.links.github_backend && (
+                                        <div className="flex flex-col items-center">
+                                            <a href={project.links.github_backend} target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors flex items-center gap-1">
+                                                <Github size={22} />
+                                                <span className="text-[10px] uppercase font-bold">BE</span>
+                                            </a>
+                                        </div>
+                                    )}
                                 </div>
                             </div>
                             <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-primary transition-colors">{project.title}</h3>
