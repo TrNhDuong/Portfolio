@@ -37,6 +37,16 @@ const Projects = () => {
                 github_backend: "https://github.com/TrNhDuong/BamboChat_Backend",
                 external: "#"
             }
+        },
+        {
+            title: "Local RAG Chatbot",
+            description: "A on-device RAG chatbot can run with internet connection or offline.",
+            tech: ["Python", "ChromaDB", "Ollama", "LangChain", "Fastembeded"],
+            links: {
+                github: "https://github.com/TrNhDuong/Local_RAG_Chatbot-UI",
+                github_backend: "https://github.com/TrNhDuong/Local_RAG_Chatbot",
+                external: "#"
+            }
         }
     ];
 
