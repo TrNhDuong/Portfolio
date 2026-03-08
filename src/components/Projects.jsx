@@ -11,6 +11,15 @@ const Projects = () => {
             links: { github: "https://github.com/TrNhDuong/VietnamWorks_DE_Pipeline", external: "#" } // Placeholder links
         },
         {
+            title: "Olist Data Pipeline",
+            description: "End-to-end Data Lakehouse pipeline for Brazilian E-commerce dataset using Azure ADLS2, Databricks, dbt.",
+            tech: ["Python", "Azure ADLS2", "Databricks", "dbt"],
+            links: {
+                github: "https://github.com/TrNhDuong/Olist-Lakehouse-pipeline",
+                external: "#"
+            }
+        },
+        {
             title: "Vietnamese-Chinese Sentence Alignment",
             description: "NLP research project for bilingual sentence alignment using Vecalign and LaBSE embeddings.",
             tech: ["Python", "NLP", "Vecalign", "LaBSE"],
