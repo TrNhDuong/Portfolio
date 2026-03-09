@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 const Skills = () => {
     const skills = {
         "Programming Languages": ["Python", "SQL", "C++", "JavaScript"],
-        "Data Engineering": ["Apache Airflow", "dbt", "Docker", "PostgreSQL", "MinIO", "Azure (ADLS Gen2, Data Factory, Databricks)"],
+        "Data Engineering": ["Apache Airflow", "Spark", "dbt", "Docker", "PostgreSQL", "MinIO", "Azure (ADLS Gen2, Data Factory, Databricks)"],
         "Web Development": ["React", "Node.js", "Express", "MongoDB", "PostgreSQL"],
         "Computer Science": ["Machine Learning (basic)", "Natural Language Processing (basic)"]
     };

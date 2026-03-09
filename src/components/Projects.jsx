@@ -3,59 +3,74 @@ import { motion } from 'framer-motion';
 import { Folder, Github } from 'lucide-react';
 
 const Projects = () => {
-    const projects = [
+    const projectCategories = [
         {
-            title: "VietnamWorks Data Pipeline",
-            description: "End-to-end ETL pipeline automating recruitment data collection and processing. Built with Python, Airflow, and dbt.",
-            tech: ["Python", "Airflow", "Docker", "dbt", "PostgreSQL", "ADLS Gen2"],
-            links: { github: "https://github.com/TrNhDuong/VietnamWorks_DE_Pipeline", external: "#" } // Placeholder links
+            title: "AI",
+            projects: [
+                {
+                    title: "Local RAG Chatbot",
+                    description: "A on-device RAG chatbot can run with internet connection or offline.",
+                    tech: ["Python", "ChromaDB", "Ollama", "LangChain", "Fastembeded"],
+                    links: {
+                        github: "https://github.com/TrNhDuong/Local_RAG_Chatbot-UI",
+                        github_backend: "https://github.com/TrNhDuong/Local_RAG_Chatbot",
+                        external: "#"
+                    }
+                },
+                {
+                    title: "Finetune NLLB-200 Distilled 1.3B for Vietnamese-Chinese Translation",
+                    description: "Fine-tuned NLLB-200 Distilled 1.3B (LoRA), boosting BLEU 22.64→31.96 (+41%), ChrF 40.52→48.09 (+19%), and reducing TER 76.17→62.97 (−17%).",
+                    tech: ["PyTorch", "Hugging Face", "NLLB-200 Distilled 1.3B", "Vietnamese-Chinese Translation"],
+                    links: { github: "https://huggingface.co/duongbambo/Finetune-NLLB-200-Distilled-1.3B", external: "#" }
+                },
+                {
+                    title: "Vietnamese-Chinese Sentence Alignment",
+                    description: "NLP research project for bilingual sentence alignment using Vecalign and LaBSE embeddings.",
+                    tech: ["Python", "NLP", "Vecalign", "LaBSE"],
+                    links: { github: "https://github.com/TrNhDuong/Vie-Cn_Sentence-Alignment", external: "#" }
+                }
+            ]
         },
         {
-            title: "Olist Data Pipeline",
-            description: "End-to-end Data Lakehouse pipeline for Brazilian E-commerce dataset using Azure ADLS2, Databricks, dbt.",
-            tech: ["Python", "Azure ADLS2", "Databricks", "dbt"],
-            links: {
-                github: "https://github.com/TrNhDuong/Olist-Lakehouse-pipeline",
-                external: "#"
-            }
+            title: "Data Engineer",
+            projects: [
+                {
+                    title: "VietnamWorks Data Pipeline",
+                    description: "End-to-end ETL pipeline automating recruitment data collection and processing. Built with Python, Airflow, and dbt.",
+                    tech: ["Python", "Airflow", "Docker", "dbt", "PostgreSQL", "ADLS Gen2"],
+                    links: { github: "https://github.com/TrNhDuong/VietnamWorks_DE_Pipeline", external: "#" } // Placeholder links
+                },
+                {
+                    title: "Olist Data Pipeline",
+                    description: "End-to-end Data Lakehouse pipeline for Brazilian E-commerce dataset using Azure ADLS2, Databricks, dbt.",
+                    tech: ["Python", "Azure ADLS2", "Databricks", "dbt"],
+                    links: {
+                        github: "https://github.com/TrNhDuong/Olist-Lakehouse-pipeline",
+                        external: "#"
+                    }
+                }
+            ]
         },
         {
-            title: "Vietnamese-Chinese Sentence Alignment",
-            description: "NLP research project for bilingual sentence alignment using Vecalign and LaBSE embeddings.",
-            tech: ["Python", "NLP", "Vecalign", "LaBSE"],
-            links: { github: "https://github.com/TrNhDuong/Vie-Cn_Sentence-Alignment", external: "#" }
-        },
-        {
-            title: "Online Recruitment Platform",
-            description: "Full-stack web application for job matching and recruitment management.",
-            tech: ["MongoDB", "Express", "Node.js", "React"],
-            links: { github: "https://github.com/TrNhDuong/Job_Portal", external: "#" }
-        },
-        {
-            title: "Finetune NLLB-200 Distilled 1.3B for Vietnamese-Chinese Translation",
-            description: "Fine-tuned NLLB-200 Distilled 1.3B (LoRA), boosting BLEU 22.64→31.96 (+41%), ChrF 40.52→48.09 (+19%), and reducing TER 76.17→62.97 (−17%).",
-            tech: ["PyTorch", "Hugging Face", "NLLB-200 Distilled 1.3B", "Vietnamese-Chinese Translation"],
-            links: { github: "https://huggingface.co/duongbambo/Finetune-NLLB-200-Distilled-1.3B", external: "#" }
-        },
-        {
-            title: "BamboChat",
-            description: "A real-time chat application featuring private and group messaging, powered by Socket.io and Redis.",
-            tech: ["MongoDB", "Express", "Node.js", "React", "Socket.io", "Redis"],
-            links: {
-                github: "https://github.com/TrNhDuong/BamboChat_Frontend",
-                github_backend: "https://github.com/TrNhDuong/BamboChat_Backend",
-                external: "#"
-            }
-        },
-        {
-            title: "Local RAG Chatbot",
-            description: "A on-device RAG chatbot can run with internet connection or offline.",
-            tech: ["Python", "ChromaDB", "Ollama", "LangChain", "Fastembeded"],
-            links: {
-                github: "https://github.com/TrNhDuong/Local_RAG_Chatbot-UI",
-                github_backend: "https://github.com/TrNhDuong/Local_RAG_Chatbot",
-                external: "#"
-            }
+            title: "Software",
+            projects: [
+                {
+                    title: "BamboChat",
+                    description: "A real-time chat application featuring private and group messaging, powered by Socket.io and Redis.",
+                    tech: ["MongoDB", "Express", "Node.js", "React", "Socket.io", "Redis"],
+                    links: {
+                        github: "https://github.com/TrNhDuong/BamboChat_Frontend",
+                        github_backend: "https://github.com/TrNhDuong/BamboChat_Backend",
+                        external: "#"
+                    }
+                },
+                {
+                    title: "Online Recruitment Platform",
+                    description: "Full-stack web application for job matching and recruitment management.",
+                    tech: ["MongoDB", "Express", "Node.js", "React"],
+                    links: { github: "https://github.com/TrNhDuong/Job_Portal", external: "#" }
+                }
+            ]
         }
     ];
 
@@ -71,36 +86,46 @@ const Projects = () => {
                     <h2 className="section-title mb-0">Key Projects</h2>
                 </div>
 
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {projects.map((project, index) => (
-                        <div key={index} className="glass-card p-8 flex flex-col group h-full">
-                            <div className="flex justify-between items-center mb-6">
-                                <Folder className="text-primary group-hover:text-secondary transition-colors" size={40} />
-                                <div className="flex space-x-4 text-slate-500">
-                                    <div className="flex flex-col items-center">
-                                        <a href={project.links.github} target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors flex items-center gap-1">
-                                            <Github size={22} />
-                                            {project.links.github_backend && <span className="text-[10px] uppercase font-bold">FE</span>}
-                                        </a>
-                                    </div>
-                                    {project.links.github_backend && (
-                                        <div className="flex flex-col items-center">
-                                            <a href={project.links.github_backend} target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors flex items-center gap-1">
-                                                <Github size={22} />
-                                                <span className="text-[10px] uppercase font-bold">BE</span>
-                                            </a>
+                <div className="flex flex-col gap-16">
+                    {projectCategories.map((category, catIndex) => (
+                        <div key={catIndex}>
+                            <h3 className="text-2xl font-bold text-slate-800 mb-8 inline-block relative">
+                                {category.title}
+                                <div className="absolute -bottom-2 left-0 w-1/2 h-1 bg-primary rounded-full"></div>
+                            </h3>
+                            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                                {category.projects.map((project, index) => (
+                                    <div key={index} className="glass-card p-8 flex flex-col group h-full">
+                                        <div className="flex justify-between items-center mb-6">
+                                            <Folder className="text-primary group-hover:text-secondary transition-colors" size={40} />
+                                            <div className="flex space-x-4 text-slate-500">
+                                                <div className="flex flex-col items-center">
+                                                    <a href={project.links.github} target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors flex items-center gap-1">
+                                                        <Github size={22} />
+                                                        {project.links.github_backend && <span className="text-[10px] uppercase font-bold">FE</span>}
+                                                    </a>
+                                                </div>
+                                                {project.links.github_backend && (
+                                                    <div className="flex flex-col items-center">
+                                                        <a href={project.links.github_backend} target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors flex items-center gap-1">
+                                                            <Github size={22} />
+                                                            <span className="text-[10px] uppercase font-bold">BE</span>
+                                                        </a>
+                                                    </div>
+                                                )}
+                                            </div>
                                         </div>
-                                    )}
-                                </div>
-                            </div>
-                            <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-primary transition-colors">{project.title}</h3>
-                            <p className="text-slate-600 mb-6 text-base leading-relaxed flex-grow">{project.description}</p>
-                            <div className="mt-auto">
-                                <ul className="flex flex-wrap gap-2">
-                                    {project.tech.map((t, i) => (
-                                        <li key={i} className="text-xs font-medium text-primary bg-primary/10 px-3 py-1 rounded-full">{t}</li>
-                                    ))}
-                                </ul>
+                                        <h4 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-primary transition-colors">{project.title}</h4>
+                                        <p className="text-slate-600 mb-6 text-base leading-relaxed flex-grow">{project.description}</p>
+                                        <div className="mt-auto">
+                                            <ul className="flex flex-wrap gap-2">
+                                                {project.tech.map((t, i) => (
+                                                    <li key={i} className="text-xs font-medium text-primary bg-primary/10 px-3 py-1 rounded-full">{t}</li>
+                                                ))}
+                                            </ul>
+                                        </div>
+                                    </div>
+                                ))}
                             </div>
                         </div>
                     ))}
